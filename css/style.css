@@ -108,9 +108,6 @@ li, ul {
     color: #333;
 }
 
-/*------------------
-    Preloder
---------------------*/
 #preloder {
     position: fixed;
     width: 100%;
@@ -214,10 +211,6 @@ li, ul {
     padding: 10px 30px;
 }
 
-
-/* ====================
-  Intro Section
-=======================*/
 .intro-section {
     height: 100%;
     position: relative;
@@ -307,9 +300,6 @@ li, ul {
 }
 
 
-/* ====================
-  About Section
-=======================*/
 .about-section {
     position: relative;
     overflow: hidden;
@@ -317,7 +307,7 @@ li, ul {
 }
 .about-section h2 {
     font-weight: 300;
-    line-height: 2.3em;
+    line-height: 3.3em;
     -webkit-text-decoration-style: wavy;
             text-decoration-style: wavy;
 }
