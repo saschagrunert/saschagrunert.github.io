@@ -396,6 +396,9 @@ ul {
 .social-links a.instagram {
   background: #cd486b;
 }
+.social-links a.reddit {
+  background: #ff4500;
+}
 
 /* Tablet desktop :768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
