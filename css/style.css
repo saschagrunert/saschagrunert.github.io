@@ -384,6 +384,9 @@ ul {
 .social-links a.github {
   background: #000;
 }
+.social-links a.keybase {
+  background: #4c8eff;
+}
 .social-links a.angellist {
   background: #333;
 }
