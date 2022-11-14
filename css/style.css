@@ -361,6 +361,7 @@ ul {
 }
 
 .social-links {
+  font-size: 25px;
   margin-bottom: 25px;
 }
 .social-links a {
@@ -380,6 +381,9 @@ ul {
 }
 .social-links a.twitter {
   background: #1ab1e5;
+}
+.social-links a.mastodon {
+  background: #6364ff;
 }
 .social-links a.github {
   background: #000;
