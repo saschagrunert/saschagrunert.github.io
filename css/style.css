@@ -385,6 +385,9 @@ ul {
 .social-links a.mastodon {
   background: #6364ff;
 }
+.social-links a.bluesky {
+  background: #0085ff;
+}
 .social-links a.github {
   background: #000;
 }
