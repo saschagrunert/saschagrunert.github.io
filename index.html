@@ -8,92 +8,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="img/favicon.png" rel="shortcut icon" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-</head>
+  </head>
   <body>
-    <div id="preloder">
-      <div class="loader"></div>
-    </div>
-
     <header class="header-section">
       <div class="responsive"><i class="fa fa-bars"></i></div>
       <ul class="menu-list">
         <li><a href="#home">Home</a></li>
-        <li><a href="#social">Social</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
 
-    <section class="intro-section fix" id="home">
-      <div class="intro-bg bg-cms"></div>
+    <section class="intro-section" id="home">
+      <div class="intro-bg"></div>
+      <canvas id="round"></canvas>
       <div class="intro-inner">
         <div class="intro-content">
-          <div id="round"></div>
           <div class="profile-img">
             <img src="img/Image.jpg" alt="" />
           </div>
-          <h2><span class="element">-</span></h2>
+          <h2><span class="element"></span><span class="typed-cursor">|</span></h2>
         </div>
       </div>
     </section>
 
     <main class="main-warp">
-      <section class="about-section fix" id="social">
-        <div class="container pt100 pb100">
-          <div class="row">
-            <h2>Reach out to me</h2>
-            <div class="social-links">
-              <a
-                target="_blank"
-                href="https://github.com/saschagrunert"
-                class="github"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/sascha-grunert"
-                class="linkedin"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a
-                target="_blank"
-                href="https://reddit.com/u/DeepInsidee"
-                class="reddit"
-                ><i class="fab fa-reddit"></i
-              ></a>
-              <a
-                target="_blank"
-                href="https://www.instagram.com/saschagrunert/"
-                class="instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="promotion-section" id="contact">
-        <div class="promotion-bg"></div>
+      <section class="contact-section" id="contact">
+        <div class="contact-bg"></div>
         <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2 promotion">
-              <h2>Or drop me a mail</h2>
-              <a
-                href="mailto:mail@saschagrunert.de?subject=Feedback"
-                class="site-btn btn-light mt25"
-                >email me</a
-              >
-            </div>
+          <h2>Reach out to me</h2>
+          <div class="social-links">
+            <a
+              target="_blank"
+              href="https://github.com/saschagrunert"
+              class="github"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/sascha-grunert"
+              class="linkedin"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://reddit.com/u/DeepInsidee"
+              class="reddit"
+              ><i class="fab fa-reddit"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/saschagrunert/"
+              class="instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
+          <a
+            href="mailto:mail@saschagrunert.de?subject=Feedback"
+            class="site-btn"
+            >email me</a
+          >
         </div>
       </section>
     </main>
 
-    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/fontawesome.min.js"></script>
-    <script src="js/plugin.js"></script>
     <script src="js/init-round.js"></script>
     <script src="js/main.js"></script>
   </body>
