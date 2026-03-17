@@ -376,26 +376,8 @@ ul {
   display: table-cell;
   vertical-align: middle;
 }
-.social-links a.facebook {
-  background: #2d5da1;
-}
-.social-links a.twitter {
-  background: #1ab1e5;
-}
-.social-links a.mastodon {
-  background: #6364ff;
-}
-.social-links a.bluesky {
-  background: #0085ff;
-}
 .social-links a.github {
   background: #000;
-}
-.social-links a.keybase {
-  background: #4c8eff;
-}
-.social-links a.angellist {
-  background: #333;
 }
 .social-links a.linkedin {
   background: #0077b5;
