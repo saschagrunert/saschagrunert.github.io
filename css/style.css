@@ -29,12 +29,6 @@ h6 {
 h2 {
   font-size: 30px;
 }
-p {
-  font-size: 17px;
-  color: #777777;
-  line-height: 30px;
-  font-family: "Poppins", sans-serif;
-}
 a {
   text-decoration: none;
 }
@@ -53,14 +47,9 @@ ul {
   margin: 0 auto;
   padding: 0 15px;
 }
-.row {
-  width: 100%;
-}
 
 .site-btn {
-  position: relative;
   display: inline-block;
-  color: #fff;
   padding: 14px 40px;
   border: none;
   font-family: "Poppins", sans-serif;
@@ -86,6 +75,11 @@ ul {
 }
 .responsive {
   display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
 }
 .header-section {
   position: absolute;
@@ -95,7 +89,7 @@ ul {
   z-index: 999;
   background: rgba(255, 255, 255, 0);
   padding: 15px 50px;
-  transition: all 0.4s ease 0s;
+  transition: all 0.4s ease;
 }
 .header-section .menu-list {
   list-style: none;
@@ -114,12 +108,9 @@ ul {
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 0.09em;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease;
 }
 .header-section .menu-list li a:hover {
-  color: #fff;
-}
-.header-section .menu-list .current a {
   color: #fff;
 }
 .header-section.sticky {
@@ -217,7 +208,7 @@ ul {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg.webp"), url("../img/bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -244,7 +235,6 @@ ul {
 }
 
 .social-links {
-  font-size: 22px;
   margin-bottom: 30px;
 }
 .social-links a {
@@ -257,6 +247,10 @@ ul {
   margin: 5px;
   border-radius: 50%;
   transition: transform 0.2s ease;
+}
+.social-links a svg {
+  width: 24px;
+  height: 24px;
 }
 .social-links a:hover {
   transform: scale(1.15);
@@ -275,7 +269,6 @@ ul {
   background: #ff4500;
 }
 
-/* Large Mobile :480px. */
 @media only screen and (max-width: 767px) {
   .header-section {
     padding: 10px 30px;
@@ -289,27 +282,12 @@ ul {
     clear: both;
     border-top: 1px solid #222;
   }
-  .header-section .menu-list li {
-    display: inline;
-  }
   .header-section .menu-list li a {
     display: block;
     padding: 10px;
   }
-  .header-section .menu-list li a:after {
-    left: 0%;
-  }
-  .header-section .menu-list li a:hover:after {
-    width: 10px;
-    margin-left: 10px;
-  }
-  .header-section .menu-list .current a:after {
-    margin-left: 10px;
-  }
   .responsive {
     display: block;
-    color: #fff;
-    font-size: 34px;
     position: absolute;
     right: 30px;
   }
@@ -318,7 +296,6 @@ ul {
   }
 }
 
-/* small mobile :320px. */
 @media only screen and (max-width: 479px) {
   .intro-inner .intro-content h2 {
     font-size: 27px;
