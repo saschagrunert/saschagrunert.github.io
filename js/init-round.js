@@ -60,7 +60,8 @@
   var pool = [];
   var mouseX = 0;
   var mouseY = 0;
-  var isMouseOver = false;
+  var isMoving = false;
+  var moveTimer = null;
 
   function resize() {
     var dpr = window.devicePixelRatio || 1;
@@ -94,7 +95,7 @@
     var h = canvas.offsetHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    if (isMouseOver) {
+    if (isMoving) {
       var max = Math.floor(random(1, 4));
       for (var j = 0; j < max; j++) {
         spawn(mouseX, mouseY);
@@ -132,11 +133,15 @@
     var rect = canvas.getBoundingClientRect();
     mouseX = e.clientX - rect.left;
     mouseY = e.clientY - rect.top;
-    isMouseOver = true;
+    isMoving = true;
+    clearTimeout(moveTimer);
+    moveTimer = setTimeout(function () {
+      isMoving = false;
+    }, 100);
   });
 
   canvas.addEventListener("mouseleave", function () {
-    isMouseOver = false;
+    isMoving = false;
   });
 
   canvas.addEventListener("touchmove", function (e) {
