@@ -54,6 +54,8 @@
     ctx.fill();
   };
 
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
   var canvas = document.getElementById("round");
   var ctx = canvas.getContext("2d");
   var particles = [];
@@ -62,6 +64,8 @@
   var mouseY = 0;
   var isMoving = false;
   var moveTimer = null;
+  var isVisible = true;
+  var animationId = null;
 
   function resize() {
     var dpr = window.devicePixelRatio || 1;
@@ -91,8 +95,11 @@
   }
 
   function loop() {
-    var w = canvas.offsetWidth;
-    var h = canvas.offsetHeight;
+    if (!isVisible) {
+      animationId = null;
+      return;
+    }
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     if (isMoving) {
@@ -116,11 +123,23 @@
       particles[k].draw(ctx);
     }
 
-    requestAnimationFrame(loop);
+    animationId = requestAnimationFrame(loop);
   }
 
   resize();
   window.addEventListener("resize", resize);
+
+  // Pause animation when canvas is not visible
+  var observer = new IntersectionObserver(
+    function (entries) {
+      isVisible = entries[0].isIntersecting;
+      if (isVisible && !animationId) {
+        animationId = requestAnimationFrame(loop);
+      }
+    },
+    { threshold: 0 },
+  );
+  observer.observe(canvas);
 
   // Initial particles
   var cw = canvas.offsetWidth * 0.5;
