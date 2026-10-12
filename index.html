@@ -7,9 +7,9 @@
       name="description"
       content="Personal homepage of Sascha Grunert, Graduate Engineer for Information Technology from Leipzig, Germany."
     />
-    <meta name="keywords" content="sascha, grunert" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0a0c17" />
+    <link rel="canonical" href="https://saschagrunert.de/" />
 
     <meta property="og:title" content="Sascha Grunert" />
     <meta
@@ -20,6 +20,19 @@
     <meta property="og:url" content="https://saschagrunert.de" />
     <meta
       property="og:image"
+      content="https://saschagrunert.de/img/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sascha Grunert" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sascha Grunert" />
+    <meta
+      name="twitter:description"
+      content="Graduate Engineer for Information Technology from Leipzig, Germany."
+    />
+    <meta
+      name="twitter:image"
       content="https://saschagrunert.de/img/og-image.jpg"
     />
 
@@ -59,10 +72,25 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="preload" href="img/bg.webp" as="image" type="image/webp" />
 
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sascha Grunert",
+        "url": "https://saschagrunert.de/",
+        "image": "https://saschagrunert.de/img/Image.jpg",
+        "email": "mailto:mail@saschagrunert.de",
+        "sameAs": [
+          "https://github.com/saschagrunert",
+          "https://www.linkedin.com/in/sascha-grunert",
+          "https://reddit.com/u/DeepInsidee",
+          "https://www.instagram.com/saschagrunert/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="header-section">
@@ -93,17 +121,30 @@
                   alt="Sascha Grunert"
                   width="160"
                   height="160"
+                  fetchpriority="high"
                 />
               </picture>
             </div>
-            <h2>
+            <h1 class="visually-hidden">Sascha Grunert</h1>
+            <p class="visually-hidden">
+              Graduate Engineer for Information Technology from Leipzig,
+              Germany.
+            </p>
+            <p class="typed" aria-hidden="true">
               <span class="element"></span><span class="typed-cursor">|</span>
-            </h2>
+            </p>
           </div>
         </div>
         <a href="#contact" class="scroll-down" aria-label="Scroll down">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 10l5 5 5-5"/>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M7 10l5 5 5-5" />
           </svg>
         </a>
       </section>

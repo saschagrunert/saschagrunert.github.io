@@ -53,9 +53,9 @@
     var stringIndex = 0;
     var charIndex = 0;
     var isDeleting = false;
-    var typeSpeed = 10;
-    var backSpeed = 5;
-    var backDelay = 2000;
+    var typeSpeed = 60;
+    var backSpeed = 30;
+    var backDelay = 2500;
 
     function type() {
       var current = strings[stringIndex];
@@ -76,7 +76,7 @@
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         stringIndex = (stringIndex + 1) % strings.length;
-        delay = 200;
+        delay = 500;
       }
 
       setTimeout(type, delay);
